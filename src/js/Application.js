@@ -34,7 +34,7 @@ export default class Application extends EventEmitter {
     const collection = document.querySelector(".article");
     collection.addEventListener("click", () => {
       anime({
-        targets:collection,
+        targets:"p",
         translateX: 250,
         direction: 'alternate',
         loop: true,
