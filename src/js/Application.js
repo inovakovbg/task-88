@@ -21,19 +21,20 @@ export default class Application extends EventEmitter {
     //   collection.style.color="red";
     //   console.log("2")}
 
-    // var Animation= anime({
-    //   targets:".article",
-    //   translateX: 250,
-    //   direction: 'alternate',
-    //   loop: true,
-    //   easing: 'spring(1, 80, 10, 0)'
-    // })
+    var Animation= anime({
+      targets:".article",
+      translateX: 250,
+      direction: 'alternate',
+      loop: true,
+      easing: 'spring(1, 80, 10, 0)'
+    })
 
 
 
-    document.querySelector("article").addEventListener("click", () => {
+    const collection = document.querySelector(".article");
+    collection.addEventListener("click", () => {
       anime({
-        targets:"p",
+        targets:collection,
         translateX: 250,
         direction: 'alternate',
         loop: true,
