@@ -12,5 +12,42 @@ export default class Application extends EventEmitter {
     this.init();
     this.emit(Application.events.READY);
   }
-  init() {}
-}
+  init() {
+
+    
+    // const collection = document.getElementsByClassName("article");
+    // collection.style.color="red";
+    // collection.addEventListener("click", () => {
+    //   collection.style.color="red";
+    //   console.log("2")}
+
+    // var Animation= anime({
+    //   targets:".article",
+    //   translateX: 250,
+    //   direction: 'alternate',
+    //   loop: true,
+    //   easing: 'spring(1, 80, 10, 0)'
+    // })
+
+
+
+    document.querySelector("article").addEventListener("click", () => {
+      anime({
+        targets:"p",
+        translateX: 250,
+        direction: 'alternate',
+        loop: true,
+        easing: 'spring(1, 80, 10, 0)'
+      })
+      
+    }
+    );
+
+  // document.querySelector('.play-Animation').onclick = Animation.restart;
+
+    
+
+  //   myScript() {
+  //   console.log(collection);
+  // }
+}}
